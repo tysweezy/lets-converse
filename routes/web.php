@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return 'Welcome to this forum';
+    return view('home');
 });
+
+// board -- 'c' for community
+Route::resource('c', 'BoardController');
+
+
+Auth::routes();
